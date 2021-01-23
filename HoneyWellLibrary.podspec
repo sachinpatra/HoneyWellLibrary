@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HoneyWellLibrary'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'Circular slider - to slide from 0 to 1 in circular shape'
 
 # This description is used to generate tags and improve search results.
