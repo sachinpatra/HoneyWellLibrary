@@ -1,0 +1,22 @@
+{
+  "name": "HoneyWellLibrary",
+  "version": "0.1.0",
+  "summary": "A short description of HoneyWellLibrary.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/sachinpatra/HoneyWellLibrary",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "sachinpatra": "sachinpatra24@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/sachinpatra/HoneyWellLibrary.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "HoneyWellLibrary/Classes/**/*"
+}

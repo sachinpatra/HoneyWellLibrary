@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import HoneyWellLibrary
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var slider: Slider!
+    @IBOutlet weak var valueLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        slider.lineWidth = 4
+        slider.pointerLength = 12
+        slider.addTarget(self, action: #selector(ViewController.handleValueChanged(_:)), for: .valueChanged)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func handleValueChanged(_ sender: Any) {
+        valueLabel.text = String(format: "%.2f", slider.value)
     }
 
 }

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +18,44 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3RF-qZ-NHB" customClass="Slider" customModule="HoneyWellLibrary">
+                                <rect key="frame" x="117" y="126" width="140" height="140"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="C8i-X9-sei"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="E4Z-Wk-qVZ"/>
+                                    <constraint firstAttribute="height" constant="140" id="vcT-3G-Arf"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLN-Ha-PwW">
+                                <rect key="frame" x="102" y="407" width="187" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JOO-lv-7L9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3RF-qZ-NHB" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="126" id="4OB-Im-V3Y"/>
+                            <constraint firstItem="3RF-qZ-NHB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="117" id="JaP-C0-alq"/>
+                            <constraint firstItem="gLN-Ha-PwW" firstAttribute="top" secondItem="3RF-qZ-NHB" secondAttribute="bottom" constant="141" id="hB4-zU-vjL"/>
+                            <constraint firstAttribute="trailing" secondItem="gLN-Ha-PwW" secondAttribute="trailing" constant="86" id="mCf-WZ-911"/>
+                            <constraint firstItem="gLN-Ha-PwW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="102" id="nQq-tm-QSw"/>
+                            <constraint firstAttribute="trailing" secondItem="3RF-qZ-NHB" secondAttribute="trailing" constant="118" id="zkx-9Z-VkG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="3RF-qZ-NHB" id="6YY-aD-wsV"/>
+                        <outlet property="valueLabel" destination="gLN-Ha-PwW" id="mTK-aa-5yL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="127" y="101"/>
         </scene>
     </scenes>
 </document>

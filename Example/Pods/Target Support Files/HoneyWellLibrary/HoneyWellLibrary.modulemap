@@ -1,0 +1,6 @@
+framework module HoneyWellLibrary {
+  umbrella header "HoneyWellLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}
